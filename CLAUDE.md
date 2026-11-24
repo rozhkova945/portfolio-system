@@ -8,9 +8,28 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 - Next.js (App Router), TypeScript, npm, Tailwind v4. Токени в блоці `@theme` у `src/app/globals.css`. Шрифт Inter (latin + cyrillic) підключено в `src/app/fonts.ts`.
 - Хостинг: Vercel, репозиторій https://github.com/rozhkova945/portfolio-system
 
+## Команди
+- `npm run dev`: сайт на http://localhost:3000
+- `npm run storybook`: Storybook на http://localhost:6006
+- `npm run build`: збірка, як на Vercel (перевіряй перед комітом)
+- `npm run lint`: перевірка коду
+
+## Структура
+- `src/app/`: сторінки (`page.tsx`), `layout.tsx`, `globals.css` (токени в `@theme`), `fonts.ts`
+- `src/components/<Назва>/`: компонент і його історія Storybook
+- `src/stories/`: сторінки Storybook без компонента (`Tokens.mdx`)
+- `docs/`: план сайту, Figma, затверджені токени
+
 ## Правила роботи з Git
 - Уся робота йде в гілці `main`. Нових гілок не створюй, поки я прямо не попрошу.
-- Пуш у `main` публікує сайт на Vercel: перед пушем чекай окремого «так» у чаті.
+- Пуш у `main` публікує сайт на Vercel: перед пушем чекай окремого «так» у чаті. Комітити можна після кожного завершеного кроку.
+- Файли `.env*` не читай, не виводь і не комітимо (вони в `.gitignore`). Токенів і паролів у чат не прошу й не приймаю.
+
+## Як працювати
+- Екран збирається тільки з наявних компонентів і токенів. Якщо чогось бракує, не вигадуй: назви, чого бракує, і спитай мене.
+- Новий або змінений компонент: одна історія з Controls і сторінка docs у тому ж кроці, `title` латиницею. Тимчасових сторінок-перевірок на сайті не створюй: усе дивимось у Storybook.
+- Після змін перевір, що в коді немає значень поза `@theme`, і що кожен клас справді працює: після скидання палітри й шкал Tailwind мовчки ігнорує невідомі класи.
+- Пояснюй простими словами, я дизайнерка-початківка.
 
 ## Storybook
 - Запуск: `npm run storybook` (http://localhost:6006). Сторінка токенів: `src/stories/Tokens.mdx`. Правила: `.claude/skills/storybook/SKILL.md`
@@ -36,6 +55,12 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 - `Navigation` (`Components/Navigation`): логотип, пункти меню, кнопка дії; стани default, hover, focus, активний пункт (`activeHref`); на вузькому екрані меню відкривається поверх контенту й закривається Escape
 - `Field` (`Components/Field`): текстове поле з підписом; стани default, hover, focus, заповнене, помилка (`danger` + текст під полем), disabled
 
+## Відомі особливості
+- `Button` і `Navigation` клієнтські (`"use client"`): Button вішає обробник кліку, а сторінки серверні.
+- Відступів 0, 5, 10 тощо немає: класи на кшталт `inset-x-0` чи `w-32` не працюють. Для ширин бери `w-full`, `w-1/4`, `max-w-page`, для позиціювання `top-full` і `w-full`.
+- У MDX-сторінках Storybook зразки з токенами клади в `<Unstyled>`, інакше Storybook перекриває розмір і шрифт.
+- Після додавання нових файлів Storybook інколи не бачить нових класів Tailwind: перезапусти `npm run storybook`.
+
 ## Скіли
 - `.claude/skills/storybook/SKILL.md`: Storybook, історії й документація компонентів
-- `.claude/skills/vercel/SKILL.md`: превʼю, деплой і логи Vercel
+- `.claude/skills/vercel/SKILL.md`: превʼю, деплой і логи Vercel (продакшн лише після мого «так»)
