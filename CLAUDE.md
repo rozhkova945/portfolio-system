@@ -33,6 +33,7 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 ## Компоненти
 Лежать у `src/components/<Назва>/`, поруч історія `<Назва>.stories.tsx` (одна, з Controls і docs).
 - `Button` (`Components/Button`): варіанти `primary`, `secondary`; розміри `md`, `lg`; стани default, hover, focus, disabled через `aria-disabled` + `aria-describedby`; може бути посиланням (`href`)
+- `Navigation` (`Components/Navigation`): логотип, пункти меню, кнопка дії; стани default, hover, focus, активний пункт (`activeHref`); на вузькому екрані меню відкривається поверх контенту й закривається Escape
 
 ## Скіли
 - `.claude/skills/storybook/SKILL.md`: Storybook, історії й документація компонентів
