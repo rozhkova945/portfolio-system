@@ -1,27 +1,23 @@
+import { Button } from "@/components/Button/Button";
+import { Navigation } from "@/components/Navigation/Navigation";
+
+const navItems = [
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "CV ↗", href: "#cv" },
+];
 const projects = ["WellBite", "Love App", "MindfullMood", "FlowMetrics"];
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-canvas text-ink">
       <div className="mx-auto flex w-full max-w-page flex-1 flex-col px-6 pb-8 lg:px-8">
-        <nav className="flex items-center justify-between py-8">
-          <a className="text-title" href="#">
-            YAROSLAVA
-            <br />
-            ROZHKOVA
-          </a>
-          <div className="flex items-center gap-6 text-body lg:gap-8">
-            <a className="hidden sm:inline" href="#work">Work</a>
-            <a className="hidden sm:inline" href="#about">About</a>
-            <a className="hidden sm:inline" href="#cv">CV ↗</a>
-            <a
-              className="rounded-control bg-ink px-6 py-3 text-button text-canvas"
-              href="#contact"
-            >
-              Let’s talk ↗
-            </a>
-          </div>
-        </nav>
+        <Navigation
+          logo="Yaroslava Rozhkova"
+          items={navItems}
+          ctaLabel="Let’s talk ↗"
+          ctaHref="#contact"
+        />
         <hr className="border-line" />
 
         <header className="flex flex-1 flex-col pt-8">
@@ -39,18 +35,8 @@ export default function Home() {
           </p>
           <div className="mt-auto flex flex-wrap items-start justify-between gap-6 pt-8">
             <div className="flex flex-wrap gap-3">
-              <a
-                className="rounded-control bg-ink px-6 py-3 text-button text-canvas"
-                href="#work"
-              >
-                View selected work ↓
-              </a>
-              <a
-                className="rounded-control border border-ink-muted px-6 py-3 text-button text-ink"
-                href="#contact"
-              >
-                Get in touch ↗
-              </a>
+              <Button size="lg" href="#work">View selected work ↓</Button>
+              <Button size="lg" variant="secondary" href="#contact">Get in touch ↗</Button>
             </div>
             <div className="flex flex-col gap-3 text-button">
               <p>
