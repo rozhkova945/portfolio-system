@@ -6,7 +6,8 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 
 ## Стек
 - Next.js (App Router), TypeScript, npm, Tailwind v4. Токени в блоці `@theme` у `src/app/globals.css`. Шрифт Inter (latin + cyrillic) підключено в `src/app/fonts.ts`.
-- Хостинг: Vercel, репозиторій https://github.com/rozhkova945/portfolio-system
+- Хостинг: Vercel (проєкт `portfolio-system`, тека привʼязана через `vercel link`, папка `.vercel` і `.env.local` у `.gitignore`), репозиторій https://github.com/rozhkova945/portfolio-system
+- Статус деплою: `vercel ls`, деталі: `vercel inspect <адреса>` (target production і Ready). Перевірка й публікація: скіл `vercel`
 
 ## Команди
 - `npm run dev`: сайт на http://localhost:3000
