@@ -20,7 +20,7 @@ import { Meta, ColorPalette, ColorItem, Unstyled } from '@storybook/addon-docs/b
 
 ## Шрифт і розміри тексту
 
-Шрифт: Inter (латиниця й кирилиця).
+<Unstyled><div className="font-sans text-body text-ink">Шрифт: Inter (латиниця й кирилиця).</div></Unstyled>
 
 <Unstyled>
 <div className="flex flex-col gap-6 font-sans text-ink">
@@ -38,24 +38,30 @@ import { Meta, ColorPalette, ColorItem, Unstyled } from '@storybook/addon-docs/b
 
 ## Радіуси
 
-<div className="flex flex-wrap items-center gap-6">
+<Unstyled>
+<div className="font-sans text-ink flex flex-wrap items-center gap-6">
   <div className="rounded-control border border-ink-muted px-8 py-3 text-caption">control</div>
   <div className="rounded-card border border-ink-muted px-8 py-8 text-caption">card</div>
 </div>
+</Unstyled>
 
 ## Пропорція картинок
 
-<div className="flex flex-col gap-3">
+<Unstyled>
+<div className="font-sans text-ink flex flex-col gap-3">
   <div className="aspect-cover w-1/4 rounded-card border border-ink-muted bg-surface" />
   <span className="text-caption">cover (3 / 2)</span>
 </div>
+</Unstyled>
 
 ## Відступи
 
-<div className="flex flex-col gap-3">
+<Unstyled>
+<div className="font-sans text-ink flex flex-col gap-3">
   <div className="flex items-center gap-4"><div className="h-2 w-2 bg-ink" /><span className="text-caption">2 — 8 px</span></div>
   <div className="flex items-center gap-4"><div className="h-3 w-3 bg-ink" /><span className="text-caption">3 — 12 px</span></div>
   <div className="flex items-center gap-4"><div className="h-4 w-4 bg-ink" /><span className="text-caption">4 — 16 px</span></div>
   <div className="flex items-center gap-4"><div className="h-6 w-6 bg-ink" /><span className="text-caption">6 — 24 px</span></div>
   <div className="flex items-center gap-4"><div className="h-8 w-8 bg-ink" /><span className="text-caption">8 — 32 px</span></div>
 </div>
+</Unstyled>
