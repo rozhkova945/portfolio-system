@@ -1,1 +1,77 @@
-body{margin:0;background:#f7f5f0;color:#20201e}
+@import "tailwindcss";
+
+/* Єдине джерело значень дизайн-системи. Затверджена таблиця: docs/tokens.md */
+@theme {
+  /* Кольори: стандартна палітра Tailwind скинута */
+  --color-*: initial;
+  --color-canvas: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-line: #d7d5ce;
+  --color-accent: #ea4c18;
+  --color-ink: #20201e;
+  --color-ink-muted: #65655e;
+  --color-danger: #b00020;
+
+  /* Розміри тексту: розмір, висота рядка, трекінг, жирність парами */
+  --text-*: initial;
+  --text-display: clamp(2.75rem, 7.1vw, 6.375rem); /* 102px на десктопі */
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.049em;
+  --text-display--font-weight: 400;
+  --text-lead: 23px;
+  --text-lead--line-height: normal;
+  --text-lead--letter-spacing: -0.5px;
+  --text-lead--font-weight: 400;
+  --text-heading: 17px;
+  --text-heading--line-height: normal;
+  --text-heading--letter-spacing: 0;
+  --text-heading--font-weight: 400;
+  --text-title: 19px;
+  --text-title--line-height: 24px;
+  --text-title--letter-spacing: -0.5px;
+  --text-title--font-weight: 600;
+  --text-body: 16px;
+  --text-body--line-height: normal;
+  --text-body--letter-spacing: 0;
+  --text-body--font-weight: 400;
+  --text-button: 15px;
+  --text-button--line-height: normal;
+  --text-button--letter-spacing: 0;
+  --text-button--font-weight: 400;
+  --text-label: 13px;
+  --text-label--line-height: normal;
+  --text-label--letter-spacing: 1.5px;
+  --text-label--font-weight: 400;
+  --text-caption: 13px;
+  --text-caption--line-height: normal;
+  --text-caption--letter-spacing: 0;
+  --text-caption--font-weight: 400;
+
+  /* Радіуси */
+  --radius-*: initial;
+  --radius-control: 9999px;
+  --radius-card: 16px;
+
+  /* Пропорції картинок */
+  --aspect-cover: 3 / 2;
+
+  /* Відступи: лише 8, 12, 16, 24, 32 px (класи 2, 3, 4, 6, 8) */
+  --spacing-*: initial;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+
+  /* Ширина сторінки: 1312px вмісту + 2 × 32px полів */
+  --container-page: 86rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
