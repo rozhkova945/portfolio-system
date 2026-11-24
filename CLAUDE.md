@@ -31,7 +31,8 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 - Заборонено: hex і rgb, стандартні класи Tailwind поза системою (`bg-blue-600`, `text-sm`, `text-white`), значення в квадратних дужках (`p-[13px]`)
 
 ## Компоненти
-Поки немає (є лише сторінка `src/app/page.tsx`).
+Лежать у `src/components/<Назва>/`, поруч історія `<Назва>.stories.tsx` (одна, з Controls і docs).
+- `Button` (`Components/Button`): варіанти `primary`, `secondary`; розміри `md`, `lg`; стани default, hover, focus, disabled через `aria-disabled` + `aria-describedby`; може бути посиланням (`href`)
 
 ## Скіли
 - `.claude/skills/storybook/SKILL.md`: Storybook, історії й документація компонентів
