@@ -12,6 +12,9 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 - Уся робота йде в гілці `main`. Нових гілок не створюй, поки я прямо не попрошу.
 - Пуш у `main` публікує сайт на Vercel: перед пушем чекай окремого «так» у чаті.
 
+## Storybook
+- Запуск: `npm run storybook` (http://localhost:6006). Сторінка токенів: `src/stories/Tokens.mdx`. Правила: `.claude/skills/storybook/SKILL.md`
+
 ## Матеріали
 - План сайту: `docs/plan.docx`, `docs/plan.html`
 - Перший екран у Figma: `docs/figma.md`

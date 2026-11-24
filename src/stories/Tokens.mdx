@@ -1,0 +1,61 @@
+import { Meta, ColorPalette, ColorItem, Unstyled } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Tokens" />
+
+# Токени
+
+Єдине джерело значень — блок `@theme` у `src/app/globals.css`. Тут усе читається звідти. Затверджена таблиця: `docs/tokens.md`.
+
+## Кольори
+
+<ColorPalette>
+  <ColorItem title="canvas" subtitle="фон сторінки" colors={{ canvas: 'var(--color-canvas)' }} />
+  <ColorItem title="surface" subtitle="картки й поля" colors={{ surface: 'var(--color-surface)' }} />
+  <ColorItem title="line" subtitle="декоративні лінії й рамки карток" colors={{ line: 'var(--color-line)' }} />
+  <ColorItem title="accent" subtitle="велике слово в хедері й декор" colors={{ accent: 'var(--color-accent)' }} />
+  <ColorItem title="ink" subtitle="основний текст, темна кнопка" colors={{ ink: 'var(--color-ink)' }} />
+  <ColorItem title="ink-muted" subtitle="приглушений текст, межа поля" colors={{ 'ink-muted': 'var(--color-ink-muted)' }} />
+  <ColorItem title="danger" subtitle="помилка" colors={{ danger: 'var(--color-danger)' }} />
+</ColorPalette>
+
+## Шрифт і розміри тексту
+
+Шрифт: Inter (латиниця й кирилиця).
+
+<Unstyled>
+<div className="flex flex-col gap-6 font-sans text-ink">
+  <div className="text-display">display: I design</div>
+  <div className="text-lead">lead: Tracking. Recommendations. Small rituals.</div>
+  <div className="text-heading">heading: WellBite</div>
+  <div className="text-title">title: YAROSLAVA ROZHKOVA</div>
+  <div className="text-body">body: Work About CV</div>
+  <div className="text-button">button: View selected work</div>
+  <div className="text-label">label: UX/UI DESIGNER</div>
+  <div className="text-caption">caption: PORTFOLIO / 2026</div>
+  <div className="text-body">Кирилиця: Привіт, світе. Портфоліо дизайнерки інтерфейсів.</div>
+</div>
+</Unstyled>
+
+## Радіуси
+
+<div className="flex flex-wrap items-center gap-6">
+  <div className="rounded-control border border-ink-muted px-8 py-3 text-caption">control</div>
+  <div className="rounded-card border border-ink-muted px-8 py-8 text-caption">card</div>
+</div>
+
+## Пропорція картинок
+
+<div className="flex flex-col gap-3">
+  <div className="aspect-cover w-1/4 rounded-card border border-ink-muted bg-surface" />
+  <span className="text-caption">cover (3 / 2)</span>
+</div>
+
+## Відступи
+
+<div className="flex flex-col gap-3">
+  <div className="flex items-center gap-4"><div className="h-2 w-2 bg-ink" /><span className="text-caption">2 — 8 px</span></div>
+  <div className="flex items-center gap-4"><div className="h-3 w-3 bg-ink" /><span className="text-caption">3 — 12 px</span></div>
+  <div className="flex items-center gap-4"><div className="h-4 w-4 bg-ink" /><span className="text-caption">4 — 16 px</span></div>
+  <div className="flex items-center gap-4"><div className="h-6 w-6 bg-ink" /><span className="text-caption">6 — 24 px</span></div>
+  <div className="flex items-center gap-4"><div className="h-8 w-8 bg-ink" /><span className="text-caption">8 — 32 px</span></div>
+</div>
