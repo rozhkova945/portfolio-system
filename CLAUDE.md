@@ -12,7 +12,7 @@ UX/UI-портфоліо Yaroslava Rozhkova. Сайт англійською, р
 ## Команди
 - `npm run dev`: сайт на http://localhost:3000
 - `npm run storybook`: Storybook на http://localhost:6006
-- `npm run build`: збірка, як на Vercel (перевіряй перед комітом)
+- `npm run build`: спершу збирає Storybook у `public/storybook` (у `.gitignore`, вручну не редагуй), потім сайт, як на Vercel. Перевіряй перед комітом. Storybook на живому сайті: `/storybook/`
 - `npm run lint`: перевірка коду
 
 ## Структура
